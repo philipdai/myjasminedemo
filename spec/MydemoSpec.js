@@ -49,4 +49,13 @@ describe("My suite on toBe", function() {
 		expect(a.bar).toBeUndefined();
 
 	});
+	
+	it("Test on 'toBeNull' matcher compare against null", function() {
+		var a = null;
+		var foo = "foo";
+		
+		expect(null).toBeNull();
+		expect(a).toBeNull();
+		expect(foo).not.toBeNull();
+	});
 });
