@@ -17,3 +17,20 @@ describe("My suite is just a function", function() {
 	});
 });
 
+describe("My suite on toBe", function() {
+	it("also work for object", function() {
+		var person = {
+			name: "Philip",
+			age: 36
+		};
+		
+		var me = {
+			name: "Philip",
+			age: 36
+		};
+		
+		expect(person).toEqual(me);
+	});
+	
+	
+});
