@@ -116,3 +116,22 @@ describe("My suite on toBe", function() {
 		expect(foo).toThrowError(TypeError, "This is some type error");
 	});
 });
+
+describe("Test on using the fail function", function() {
+	var foo = function(x, callBack) {
+		if (x) {
+			callBack();
+		}
+	};
+	
+	it("should not call the callBack", function() {
+		foo(false, function() {
+			fail("Callback has been called");
+		});
+		
+	});
+});
+
+
+
+
