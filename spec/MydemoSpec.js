@@ -40,5 +40,13 @@ describe("My suite on toBe", function() {
 		expect(msg).not.toMatch(/developer/);
 	});
 	
-	
+	it("Test on 'toBeDefined' matcher compare against 'undefined'", function() {
+		var a = {
+			foo: "foo"
+		};
+		
+		expect(a.foo).toBeDefined();
+		expect(a.bar).toBeUndefined();
+
+	});
 });
