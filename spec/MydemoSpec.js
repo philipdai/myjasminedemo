@@ -60,8 +60,14 @@ describe("My suite on toBe", function() {
 	});
 	
 	it("Test on 'toBeTruthy'", function() {
-		var a, me = "Philip Dai"
+		var a, me = "Philip Dai";
 		expect(me).toBeTruthy();
 		expect(a).not.toBeTruthy();
+	});
+	
+	it("Test on 'toBeFalsy'", function() {
+		var a, me = "Philip Dai";
+		expect(a).toBeFalsy();
+		expect(me).not.toBeFalsy();
 	});
 });
