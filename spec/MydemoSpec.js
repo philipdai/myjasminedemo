@@ -96,4 +96,12 @@ describe("My suite on toBe", function() {
 		expect(foo).not.toThrow();
 		expect(bar).toThrow();
 	});
+	
+	it("Test 'toBeCloseTo'", function() {
+		var pi = 3.14,
+				e = 2.78;
+		
+		expect(pi).not.toBeCloseTo(e, 2);
+		expect(pi).toBeCloseTo(e, 0);
+	});
 });
