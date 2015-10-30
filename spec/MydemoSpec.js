@@ -32,5 +32,13 @@ describe("My suite on toBe", function() {
 		expect(person).toEqual(me);
 	});
 	
+	it("works for regular expressions the same", function(){
+		var msg = "philip cen dai";
+		
+		expect(msg).toMatch(/cen/);
+		expect(msg).toMatch(/Dai$/i);
+		expect(msg).not.toMatch(/developer/);
+	});
+	
 	
 });
