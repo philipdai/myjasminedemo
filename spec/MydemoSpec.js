@@ -104,4 +104,15 @@ describe("My suite on toBe", function() {
 		expect(pi).not.toBeCloseTo(e, 2);
 		expect(pi).toBeCloseTo(e, 0);
 	});
+	
+	it("Test 'toThrowError'", function() {
+		var foo = function() {
+			throw new TypeError("This is some type error");
+		};
+		
+		expect(foo).toThrowError("This is some type error");
+		expect(foo).toThrowError(/^this/i);
+		expect(foo).toThrowError(TypeError);
+		expect(foo).toThrowError(TypeError, "This is some type error");
+	});
 });
