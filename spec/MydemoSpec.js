@@ -58,4 +58,10 @@ describe("My suite on toBe", function() {
 		expect(a).toBeNull();
 		expect(foo).not.toBeNull();
 	});
+	
+	it("Test on 'toBeTruthy'", function() {
+		var a, me = "Philip Dai"
+		expect(me).toBeTruthy();
+		expect(a).not.toBeTruthy();
+	});
 });
