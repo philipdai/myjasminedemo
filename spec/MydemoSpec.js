@@ -77,4 +77,23 @@ describe("My suite on toBe", function() {
 		expect(arr).toContain('Philip');
 		expect(arr).not.toContain('Developer');
 	});
+	
+	it("Test 'toBeLessThan and toBeGreatThan'", function() {
+		var one = 1, two = 2;
+		expect(one).toBeLessThan(two);
+		expect(two).toBeGreaterThan(one);
+	});
+	
+	it("Test 'toThrowError' matcher", function() {
+		var foo = function() {
+			return 2 + 1;
+		};
+		
+		var bar = function() {
+			return a + 1;
+		};
+		
+		expect(foo).not.toThrow();
+		expect(bar).toThrow();
+	});
 });
