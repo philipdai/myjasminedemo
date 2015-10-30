@@ -70,4 +70,11 @@ describe("My suite on toBe", function() {
 		expect(a).toBeFalsy();
 		expect(me).not.toBeFalsy();
 	});
+	
+	it("Test on 'toContain'", function() {
+		var arr = ['Philip', 'Cen', 'Dai'];
+		
+		expect(arr).toContain('Philip');
+		expect(arr).not.toContain('Developer');
+	});
 });
